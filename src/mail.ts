@@ -40,7 +40,7 @@ export const sendOTP = async (email: string, code: string) => {
       <td align="center">
 
         <!-- CARD -->
-        <table width="100%" style="max-width:520px;margin-top:40px;">
+        <table width="100%" style="max-width:520px;margin-top:70px; margin-bottom:80px;" cellpadding="0" cellspacing="0">
           <tr>
             <td style="
               background:rgba(255,255,255,0.04);
