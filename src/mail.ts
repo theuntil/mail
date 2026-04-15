@@ -16,6 +16,12 @@ export const sendOTP = async (email: string, code: string) => {
   const appLink = "kays://"
   const fallback = "https://kays.app"
 
+  const logo =
+    "https://supabase.rovand.cloud/storage/v1/object/public/media/kays.png"
+
+  const bg =
+    "https://supabase.rovand.cloud/storage/v1/object/public/media/kays.png" // pattern olarak kullanıyoruz
+
   await transporter.sendMail({
     from: config.emailFrom,
     to: email,
@@ -35,70 +41,70 @@ export const sendOTP = async (email: string, code: string) => {
   font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
 ">
 
-  <table width="100%" cellpadding="0" cellspacing="0">
+  <!-- BACKGROUND WRAPPER -->
+  <table width="100%" cellpadding="0" cellspacing="0"
+    style="
+      background:#0b0b0c;
+      background-image:url('${bg}');
+      background-size:120px;
+      background-repeat:repeat;
+      background-position:center;
+    "
+  >
     <tr>
       <td align="center">
 
         <!-- CARD -->
-        <table width="100%" style="max-width:520px;margin-top:40px;">
+        <table width="100%" style="max-width:520px;margin:40px 0;">
           <tr>
             <td style="
-              background:rgba(255,255,255,0.04);
-              backdrop-filter: blur(20px);
+              background:rgba(15,15,16,0.85);
               border-radius:28px;
               padding:32px;
-              border:1px solid rgba(255,255,255,0.08);
+              border:1px solid rgba(255,255,255,0.06);
+              backdrop-filter: blur(16px);
             ">
 
-              <!-- LOGO / TITLE -->
-              <div style="text-align:center;margin-bottom:20px;">
-                <div style="
-                  width:56px;
-                  height:56px;
-                  margin:0 auto 16px;
-                  border-radius:16px;
-                  background:#3b86f7;
-                  display:flex;
-                  align-items:center;
-                  justify-content:center;
-                  color:white;
-                  font-weight:bold;
-                  font-size:20px;
-                ">
-                  K
-                </div>
-
-                <h1 style="
-                  color:white;
-                  margin:0;
-                  font-size:22px;
-                  font-weight:600;
-                ">
-                  Doğrulama Kodu
-                </h1>
-
-                <p style="
-                  color:#9ca3af;
-                  font-size:14px;
-                  margin-top:8px;
-                ">
-                  Kodu uygulamaya girerek devam edin
-                </p>
+              <!-- LOGO -->
+              <div style="text-align:center;margin-bottom:18px;">
+                <img 
+                  src="${logo}" 
+                  width="64"
+                  height="64"
+                  style="border-radius:16px;"
+                />
               </div>
 
-              <!-- OTP -->
-              <div style="
+              <!-- TITLE -->
+              <h1 style="
                 text-align:center;
-                margin:30px 0;
+                color:white;
+                margin:0;
+                font-size:22px;
+                font-weight:600;
               ">
+                Doğrulama Kodu
+              </h1>
+
+              <p style="
+                text-align:center;
+                color:#9ca3af;
+                font-size:14px;
+                margin-top:8px;
+              ">
+                Devam etmek için kodu gir
+              </p>
+
+              <!-- OTP -->
+              <div style="text-align:center;margin:34px 0;">
                 <div style="
                   display:inline-block;
-                  padding:18px 28px;
-                  border-radius:18px;
+                  padding:20px 32px;
+                  border-radius:20px;
                   background:rgba(255,255,255,0.06);
-                  border:1px solid rgba(255,255,255,0.1);
-                  font-size:34px;
-                  letter-spacing:6px;
+                  border:1px solid rgba(255,255,255,0.08);
+                  font-size:38px;
+                  letter-spacing:8px;
                   font-weight:700;
                   color:white;
                 ">
@@ -109,42 +115,32 @@ export const sendOTP = async (email: string, code: string) => {
               <!-- INFO -->
               <p style="
                 text-align:center;
-                color:#9ca3af;
+                color:#6b7280;
                 font-size:13px;
-                margin-bottom:30px;
+                margin-bottom:28px;
               ">
-                Bu kod 2 dakika geçerlidir.
+                Kod 2 dakika geçerlidir
               </p>
 
               <!-- BUTTON -->
               <div style="text-align:center;">
                 <a href="${appLink}" style="
                   display:inline-block;
-                  padding:14px 26px;
+                  padding:14px 28px;
                   border-radius:999px;
                   background:#3b86f7;
                   color:white;
                   text-decoration:none;
                   font-weight:600;
                   font-size:14px;
+                  box-shadow:0 6px 20px rgba(59,134,247,0.4);
                 ">
-                  Uygulamaya Git
+                  Uygulamayı Aç
                 </a>
               </div>
 
-              <!-- FALLBACK -->
-              <p style="
-                text-align:center;
-                color:#6b7280;
-                font-size:12px;
-                margin-top:20px;
-              ">
-                Buton çalışmazsa:
-                <br/>
-                <a href="${fallback}" style="color:#3b86f7;text-decoration:none;">
-                  ${fallback}
-                </a>
-              </p>
+        
+            
 
             </td>
           </tr>
