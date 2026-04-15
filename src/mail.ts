@@ -67,7 +67,7 @@ export const sendOTP = async (email: string, code: string) => {
     font-size:26px;
     font-weight:300;
     color:#9ca3af;
-    margin-left:4px;
+   
   ">
     Verify
   </span>
