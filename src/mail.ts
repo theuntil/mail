@@ -52,11 +52,10 @@ export const sendOTP = async (email: string, code: string) => {
 
               <!-- LOGO / TITLE -->
               <div style="text-align:center;margin-bottom:20px;">
-             <div style="text-align:center; margin-bottom:16px;">
+            <div style="text-align:center; margin-bottom:16px;">
   <img 
     src="https://supabase.rovand.cloud/storage/v1/object/public/media/kays.png"
-    width="56"
-    height="56"
+    width="64"
     style="
       display:block;
       margin:0 auto;
