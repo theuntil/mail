@@ -31,7 +31,7 @@ export const sendOTP = async (email: string, code: string) => {
 <body style="
   margin:0;
   padding:0;
-  background:#0b0b0c;
+  
   font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
 ">
 
