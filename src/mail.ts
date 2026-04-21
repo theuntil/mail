@@ -31,12 +31,12 @@ export const sendOTP = async (email: string, code: string) => {
 <body style="
   margin:0;
   padding:0;
-  background:#0f141f; /* EKLENDİ */
+  background:#000; /* EKLENDİ */
   font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
 ">
 
   <!-- FULL BACKGROUND FIX -->
-  <table width="100%" cellpadding="0" cellspacing="0" style="background:#0f141f;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#000;">
     <tr>
       <td align="center">
 
