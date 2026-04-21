@@ -30,13 +30,13 @@ export const sendOTP = async (email: string, code: string) => {
 
 <body style="
   margin:0;
-  background:#0f141f
   padding:0;
-  
+  background:#0f141f; /* EKLENDİ */
   font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
 ">
 
-  <table  style="background:#0f141f; width="100%" cellpadding="0" cellspacing="0">
+  <!-- FULL BACKGROUND FIX -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#0f141f;">
     <tr>
       <td align="center">
 
@@ -46,6 +46,7 @@ export const sendOTP = async (email: string, code: string) => {
             <td style="
               background:rgba(255,255,255,0.04);
               backdrop-filter: blur(20px);
+              -webkit-backdrop-filter: blur(20px); /* EKLENDİ (iOS Mail için) */
               border-radius:28px;
               padding:32px;
               border:1px solid rgba(255,255,255,0.08);
@@ -53,27 +54,26 @@ export const sendOTP = async (email: string, code: string) => {
 
               <!-- LOGO / TITLE -->
               <div style="text-align:center;margin-bottom:20px;">
-            <div style="text-align:center; margin-bottom:18px;">
+                <div style="text-align:center; margin-bottom:18px;">
 
-  <span style="
-    font-size:26px;
-    font-weight:700;
-    color:white;
-    letter-spacing:0.5px;
-  ">
-    Kays
-  </span>
+                  <span style="
+                    font-size:26px;
+                    font-weight:700;
+                    color:white;
+                    letter-spacing:0.5px;
+                  ">
+                    Kays
+                  </span>
 
-  <span style="
-    font-size:26px;
-    font-weight:300;
-    color:#9ca3af;
-   
-  ">
-    Verify
-  </span>
+                  <span style="
+                    font-size:26px;
+                    font-weight:300;
+                    color:#9ca3af;
+                  ">
+                    Verify
+                  </span>
 
-</div>
+                </div>
 
                 <h1 style="
                   color:white;
@@ -138,9 +138,6 @@ export const sendOTP = async (email: string, code: string) => {
                   Uygulamaya Git
                 </a>
               </div>
-
-              <!-- FALLBACK -->
-             
 
             </td>
           </tr>
